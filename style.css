@@ -46,7 +46,7 @@ body {
   position: relative;
   height: 100%;
   width: 100%;
-  color: #bdc3c7;
+  color: #d3e0ea;
   cursor: pointer;
   font-size: 1.5rem;
   font-family: "Ubuntu", sans-serif;
@@ -108,13 +108,13 @@ body {
 #navbar-hamburger .hambug .hamslice{
   height: 3px;
   width: 60%;
-  background-color: #f2a154;
+  background-color: #8ab6d6;
   border-radius: 30px;
   /* opacity: 0.9; */
   transition: 1s ease;
 }
 #navbar-hamburger .change .hamslice{
-  background-color: white;
+  background-color: #2b4f60;
   position: absolute;
   width: 9%;
 }
@@ -141,7 +141,7 @@ body {
   height: 100vh;
   width: 100vw;
   background: none;
-  z-index: 1;
+  z-index: -1;
   display: none;
 }
 
@@ -153,7 +153,7 @@ body {
   width: 1vw;
   border-radius: 50%;
   transform-origin: center;
-  background-color: #f2a154;
+  background: linear-gradient(to right, #e6dada, #274046);
   z-index: 1;
   opacity: 0.95;
   transition: 1.2s;
@@ -161,6 +161,9 @@ body {
 
 #hambug-bg .change{
   transform: scale(300);
+}
+#hambug-bg.change{
+  z-index: 1;
 }
 
 @media screen and (max-width: 800px){
@@ -183,7 +186,7 @@ body {
 }
 #hambug-bg .hamItems .hamItem{
   text-align: center;
-  color: white;
+  color: #2b4f60;
   font-family: "Ubuntu", sans-serif;
   font-weight: 800;
   font-size: 1.3rem;
@@ -202,12 +205,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background: #252839;
 }
 
@@ -218,26 +217,15 @@ header .main-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: -webkit-gradient(linear, left top, right top, from(#0f2027), color-stop(#203a43), to(#2c5364));
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  -webkit-transition: -webkit-transform 20s;
-  transition: -webkit-transform 20s;
   transition: transform 20s;
-  transition: transform 20s, -webkit-transform 20s;
-  -webkit-filter: brightness(80%);
-          filter: brightness(80%);
+  filter: brightness(60%);
 }
 
 header .main-image:hover {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15);
+  transform: scale(1.15);
 }
 
 header .main-image::before {
@@ -249,16 +237,15 @@ header .main-image::before {
   opacity: 0.5;
   bottom: 0vh;
   background-size: cover;
-  -webkit-filter: blur(7px);
-          filter: blur(7px);
+  filter: blur(7px);
 }
 
 header .circle {
   position: absolute;
   height: var(--circle-height);
   width: var(--circle-width);
-  background: -webkit-gradient(linear, left top, left bottom, from(#33ccff), to(#ff0066));
-  background: linear-gradient(#33ccff, #ff0066);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e6dada), to(#274046));
+  background: linear-gradient(from left top to left bottom, #e6dada, #274046);
   border-radius: 50%;
   margin-bottom: 20vh;
   -webkit-transition: -webkit-transform 0.3s;
@@ -288,8 +275,8 @@ header .circle span {
   position: absolute;
   height: var(--circle-height);
   width: var(--circle-width);
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF8008), to(#FFC837));
-  background: linear-gradient(#FF8008, #FFC837);
+  background: -webkit-gradient(linear, left top, left bottom, from(#e6dada), to(#274046));
+  background: linear-gradient(from left top to left bottom, #e6dada, #274046);
   border-radius: 50%;
   margin-bottom: 20vh;
 }
@@ -327,7 +314,7 @@ header h2 {
   font-family: 'poppins', sans-serif;
   font-size: 4rem;
   color: #252839;
-  -webkit-text-stroke: 0.1rem #f2a154;
+  -webkit-text-stroke: 0.1rem #bdc7c9;
   font-weight: bold;
 }
 
@@ -338,12 +325,11 @@ header h2::before {
   left: 0;
   height: 100%;
   width: 0;
-  color: #f2a154;
+  color: #d8e3e7;
   -webkit-text-stroke: 0vw #383d52;
   border-right: 2px solid #faf4f4;
   overflow: hidden;
-  -webkit-animation: animate 7s linear infinite;
-          animation: animate 7s linear infinite;
+  animation: animate 7s linear infinite;
 }
 
 @-webkit-keyframes animate {
@@ -397,7 +383,7 @@ header .header-area h3 {
 }
 
 header .header-area h3 span {
-  color: #f9813a;
+  color: #d3e0ea;
   font-family: 'New Tegomin', serif;
 }
 @media screen and (max-width: 800px){
@@ -500,6 +486,7 @@ header .header-area h3 span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+          align-items: center;
 }
 
 
@@ -529,6 +516,7 @@ header .header-area h3 span {
 
 #section1 .description hr {
   color: #dddddd;
+  width: 100%;
 }
 
 #section1 .description .download-btn {
@@ -567,7 +555,7 @@ header .header-area h3 span {
   cursor: pointer;
 }
 
-@media screen and (max-width: 800px){
+@media only screen and (max-width: 800px){
   #section1 .description{
     height: 60%;
     width: 100%;
@@ -591,10 +579,12 @@ header .header-area h3 span {
     margin-bottom: 1rem;
   }
   #section1 .description .download-btn {
-    width: 100%;
+    width: 80%;
     height: 3.8vh;
   }
+  
 }
+
 
 /*# sourceMappingURL=style.css.map */
 
@@ -1019,7 +1009,7 @@ button:focus {
   font-size: 18px;
   
 }
-@media (max-width: 991px){
+@media screen and (max-width: 991px){
   .contact{
     padding: 50px;
   }
@@ -1039,5 +1029,12 @@ button:focus {
   .contactForm{
     width: 100%;
   }
-  
+  .contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~span{
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
 }

@@ -246,5 +246,6 @@ let nav = document.getElementById("navbar-hamburger")
 nav.addEventListener("click", ()=>{
 	document.querySelector(".hambug").classList.toggle("change");
 	document.querySelector(".hambg").classList.toggle("change");
-	document.querySelector(".hamItems").classList.toggle("itemChange")
+	document.querySelector(".hamItems").classList.toggle("itemChange");
+	document.getElementById("hambug-bg").classList.toggle("change");
 })
