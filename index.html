@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <title>Personal portfolio</title>
+</head>
+<body>
+    <section id="navbar">
+        <div class="navEl">
+            <div class="navElContainer">
+                <div class="navText">Home</div>
+            </div>
+            <div class="navElContainer">
+                <div class="navText">About me</div>
+            </div>
+            <div class="navElContainer">
+                <div class="navText">My projects</div>
+            </div>
+            <div class="navElContainer">
+                <div class="navText">Skills</div>
+            </div>
+            <div class="navElContainer">
+                <div class="navText">Contact me</div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="navbar-hamburger" >
+        <div class="hambug">
+            <div id="hamslice1" class="hamslice"></div>
+            <div id="hamslice2" class="hamslice"></div>
+            <div id="hamslice3" class="hamslice"></div>
+        </div>
+    </section>
+
+    <div id="hambug-bg">
+        <div class="hambg">
+        </div>
+        <div class="hamItems">
+            <div class="hamItem">Home</div>
+            <div class="hamItem">About me</div>
+            <div class="hamItem">My projects</div>
+            <div class="hamItem">Skills</div>
+            <div class="hamItem">Contact me</div>
+        </div>
+    </div>
+
+    <header>
+        <div class="main-image">
+        </div>
+        <div class="circle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h2 data-text="Hi ! I am Sambit...">Hi ! I am Sambit...</h2>
+        <div class="header-area">
+            <h3><span class="animate"></span></h3>
+        </div>
+    </header>
+
+    <div id="section1">
+        <div class="about">
+            <h2 class="about-head">About me</h2>
+            <h4 class="about-subhead">Get to know me</h4>
+            <div class="display-picture">  </div>
+        </div>
+        <div class="description">
+            
+            <div class="description-name">
+                <h2> Who am I ?</h2>
+                <h4>I'm Sambit Suvankar, a frontend web developer</h4>
+             </div>
+            <div class="description-text">
+                <p>
+                    I've graduated in mechanical engineering. After graduation I've eventually developed my passion for coding. I'm a self taught programmer and I'm challenging myself in terms of learning new skills everyday. Using minimalist asthetic, I create simple responsive websites.
+                </p>
+                <br>
+                <p>
+                    As a frontend developer I design and mostly deal with the UI components by writing the client site codes. Take a look at my portfolio work and lets see if we can work togather.
+                </p>
+            </div>
+            <hr>
+            <div class="download-btn" >
+                <div class="resume-btn"> Download Resume</div>
+                <div class='resume-btn'> My Works </div>
+            </div>
+        </div>
+    </div>
+    <!-- <hr> -->
+    <div id="section2">
+        <h1 class="projects">My works</h1>
+        <div class="app">
+
+            <div class="cardList">
+    
+                <button class="cardList__btn btn btn--left">
+                    <div class="icon">
+                        <svg>
+                            <use xlink:href='#arrow-left'></use>
+                        </svg>
+                    </div>
+                </button>
+    
+                <div class="cards__wrapper">
+                    <div class="card current--card">
+                        <div class="card__image">
+                            <a href="https://crwn--clothing-sam.herokuapp.com/" target="_blank">
+                                <img src="1.jpeg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card next--card">
+                        <div class="card__image">
+                            <a href="https://forkify-sambit.netlify.app/" target="_blank">
+                                <img src="2.jpeg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card next--card">
+                        <div class="card__image">
+                            <a href="https://sambitsuvankar.github.io/bank-list-app/" target="_blank">
+                                <img src="3.jpeg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card previous--card">
+                        <div class="card__image">
+                            <img src="4.jpeg" alt="">
+                        </div>
+                    </div>
+                </div>
+    
+                <button class="cardList__btn btn btn--right">
+                    <div class='icon'>
+                        <svg>
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                    </div>
+                </button>
+    
+            </div>
+            <div class="infoList">
+                <div class="info__wrapper">
+                    <div class="info current--info">
+                        <h1 class="text name">Crown-Clothing App</h1>
+                        <h4 class="text location">React Js</h4>
+                        <p class="text description">App state managed by Redux, Hooks & GraphQL</p>
+                    </div>
+                    <div class="info next--info">
+                        <h1 class="text name">Forkify Recipe App</h1>
+                        <h4 class="text location">ES6</h4>
+                        <p class="text description">by MVC Architecture</p>
+                    </div>
+                    <div class="info previous--info">
+                        <h1 class="text name">Bankist App</h1>
+                        <h4 class="text location">Vanilla JS</h4>
+                        <p class="text description">Simple Transaction tracker App</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--SVG start-->
+        <svg class="icons" style="display: none;">
+            <symbol id="arrow-left" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+                <polyline points='328 112 184 256 328 400'
+                             style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+            </symbol>
+            <symbol id="arrow-right" xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+                <polyline points='184 112 328 256 184 400'
+                             style='fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px' />
+            </symbol>
+        </svg>
+        <!--SVG end-->
+    </div>
+    <div id="section3">
+        <h1>My Skills</h1>
+        <div class="logos">
+            <div class="logos_row">
+                <div class="logos_item"><img src="svg/html-5.svg" alt=""> <span>HTML5</span></div>
+                <div class="logos_item"><img src="svg/react.svg" alt=""><span>React</span></div>
+                <div class="logos_item"><img src="svg/gatsby.svg" alt=""><span>GatsbyJS</span></div>
+                <div class="logos_item"><img src="svg/babel.svg" alt=""><span>Babel</span></div>
+            </div>
+            <div class="logos_row">
+                <div class="logos_item"><img src="svg/css-3.svg" alt=""><span>CSS</span></div>
+                <div class="logos_item"><img src="svg/redux.svg" alt=""><span>Redux</span></div>
+                <div class="logos_item"><img src="svg/graphql.svg" alt=""><span>GraphQL</span></div>
+                <div class="logos_item"><img src="svg/sass.svg" alt=""><span>Sass</span></div>
+                
+            </div>
+            <div class="logos_row">
+                <div class="logos_item"><img src="svg/javascript.svg" alt=""><span>JavaScript</span></div>
+                <div class="logos_item"><img src="svg/redux-saga.svg" alt=""><span>Redux-saga</span></div>
+                <div class="logos_item"><img src="svg/npm.svg" alt=""><span>NPM</span></div>
+                <div class="logos_item"><img src="svg/nodejs-icon.svg" alt=""><span>nodeJS</span></div>
+                
+            </div>
+            <div class="logos_row">
+                <div class="logos_item"><img src="svg/bootstrap.svg" alt=""><span>Bootstrap</span></div>
+                <div class="logos_item"><img src="svg/react-router.svg" alt=""><span>React-router</span></div>
+                <div class="logos_item"><img src="svg/yarn.svg" alt=""><span>Yarn</span></div>
+                <div class="logos_item"><img src="svg/firebase.svg" alt=""><span>Firebase</span></div>
+
+            </div>
+        </div>
+    </div>
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Me</h2>
+            <p>If you liked my work then do let me know if we can work togather. My contact details are given below</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Bhubaneswar, Odisha <br> India</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>(+91) 7008756221</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>sambitsuvankar007@hotmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contactForm">
+                <form>
+                    <h2>Send message</h2>
+                    <div class="inputBox">
+                        <input type="text" name="" required='required'>
+                        <span>Full name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="" required='required'>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required='required'></textarea>
+                        <span>Type your messages....</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="send">
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script type="text/javascript" src="typed.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed('.animate', {
+            strings: ["I'm a frontend web developer.", 'I can make beautiful websites for you.'],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+            });
+      </script>
+
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
