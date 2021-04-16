@@ -89,7 +89,7 @@ body {
   height: 5vh;
   width: 100vw;
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   display: none;
   justify-content: flex-end;
   margin-top: 10px;
@@ -154,7 +154,7 @@ body {
   border-radius: 50%;
   transform-origin: center;
   background: linear-gradient(to right, #e6dada, #274046);
-  z-index: 1;
+  z-index: 3;
   opacity: 0.95;
   transition: 1.2s;
 }
@@ -163,7 +163,7 @@ body {
   transform: scale(300);
 }
 #hambug-bg.change{
-  z-index: 1;
+  z-index: 2;
 }
 
 @media screen and (max-width: 800px){
@@ -244,8 +244,8 @@ header .circle {
   position: absolute;
   height: var(--circle-height);
   width: var(--circle-width);
-  background: -webkit-gradient(linear, left top, left bottom, from(#e6dada), to(#274046));
-  background: linear-gradient(from left top to left bottom, #e6dada, #274046);
+  background: -webkit-gradient(linear, left top, left bottom, from(#274046), to(#e6dada));
+  background: linear-gradient(from left top to left bottom, #274046 , #e6dada);
   border-radius: 50%;
   margin-bottom: 20vh;
   -webkit-transition: -webkit-transform 0.3s;
@@ -267,6 +267,7 @@ header .circle::after {
   bottom: 3px;
   left: 3px;
   background-image: url("./profile.jpg");
+  background-color: black;
   background-size: 100%;
   border-radius: 50%;
 }
@@ -275,8 +276,9 @@ header .circle span {
   position: absolute;
   height: var(--circle-height);
   width: var(--circle-width);
-  background: -webkit-gradient(linear, left top, left bottom, from(#e6dada), to(#274046));
-  background: linear-gradient(from left top to left bottom, #e6dada, #274046);
+  
+  background: -webkit-gradient(linear, left top, left bottom, from(#274046), to(#e6dada));
+  background: linear-gradient(from left top to left bottom, #274046 , #e6dada);
   border-radius: 50%;
   margin-bottom: 20vh;
 }
@@ -589,22 +591,32 @@ header .header-area h3 span {
 /*# sourceMappingURL=style.css.map */
 
 #section2{
+  position: absolute;
+  z-index: 1;
   width: 100vw;
-  height: 100vh;
+  height: 160vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   background: linear-gradient(to right, #434343, #000000);
   overflow: hidden;
 }
-.projects{
+.projects--heading1{
   color: #dddddd;
   font-size: 2.5rem;
   padding-bottom: 1rem;
   font-family: "Ubuntu", sans-serif;
   position: relative;
   top: 20vh;
+}
+.projects--heading2{
+  color: #dddddd;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  font-family: "Ubuntu", sans-serif;
+  position: relative;
+  margin-bottom: 5vh;
 }
 
 button {
@@ -620,7 +632,7 @@ button:focus {
 .app {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -652,6 +664,7 @@ button:focus {
 .cardList__btn .icon svg {
   width: 100%;
   height: 100%;
+  color: rgb(172, 30, 30);
 }
 .cardList .cards__wrapper {
   position: relative;
@@ -813,11 +826,60 @@ button:focus {
     right: 15%;
   }
 
-  .projects{
+  .projects--heading1 , .projects--heading2{
     font-size: 1.5rem;
   }
 }
+/* Swiper section */
 
+.app2 {
+  position: relative;
+  height: 50vh;
+  width: 60vw;
+  background: rgb(0, 0, 0);
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: rgb(0, 0, 0);
+  background-size: cover;
+  overflow: hidden;
+  cursor: pointer;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-slide:nth-child(1){
+  background-image: url("./4.jpeg");
+}
+@media screen and (max-width:800px){
+  .app2{
+    width: 90vw;
+    height: 30vh;
+  }
+}
 /* Section 3 */
 
 #section3{
@@ -830,7 +892,8 @@ button:focus {
   height: 100vh;
   width: 100vw;
   align-items: center;
-
+  position: absolute;
+  top: 360vh;
 }
 #section3 h1{
   color: #dddddd;
@@ -852,7 +915,7 @@ button:focus {
 .logos_row{
   /* background-color: #c9c6c6; */
   height: 100%;
-  width: 10vw;
+  width: 15vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -865,27 +928,29 @@ button:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
 }
 
 .logos_item img{
-  width: 100%;
-  height: 87%;
+  width: 60%;
+  height: 70%;
 }
 .logos_item span{
+  height: 20%;
   color: #b4a5a5;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 1000;
   width: 100%;
   text-overflow: clip;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 7px;
 }
 
 /* contact section */
 
 .contact{
-  position: relative;
+  position: absolute;
+  top: 460vh;
   padding: 50px 100px;
   min-height: 100vh;
   width: 100vw;

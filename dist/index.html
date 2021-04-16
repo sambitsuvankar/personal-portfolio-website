@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="/index.f556d9ac.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <title>Personal portfolio</title>
 </head>
 <body>
@@ -100,7 +101,7 @@
     </div>
     <!-- <hr> -->
     <div id="section2">
-        <h1 class="projects">My works</h1>
+        <h1 class="projects--heading1">My works</h1>
         <div class="app">
 
             <div class="cardList">
@@ -128,18 +129,18 @@
                             </a>
                         </div>
                     </div>
-                    <div class="card next--card">
+                    <div class="card previous--card">
                         <div class="card__image">
                             <a href="https://sambitsuvankar.github.io/bank-list-app/" target="_blank">
                                 <img src="/3.40df9290.jpeg" alt="">
                             </a>
                         </div>
                     </div>
-                    <div class="card previous--card">
+                    <!-- <div class="card previous--card">
                         <div class="card__image">
-                            <img src="/4.206b08ca.jpeg" alt="">
+                            <img src="4.jpeg" alt="">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
     
                 <button class="cardList__btn btn btn--right">
@@ -171,12 +172,28 @@
                 </div>
             </div>
         </div>
+        
+        <h1 class="projects--heading2"> Additional Projects </h1>
 
+        <div class="app2">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"></div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
         <!--SVG start-->
-        <svg class="icons" style="display: none;
+        <svg class="icons" style="display: none; color: black;
 ">
             <symbol id="arrow-left" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
-                <polyline points="328 112 184 256 328 400" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px
+                <polyline points="328 112 184 256 328 400" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px;
 "></polyline>
             </symbol>
             <symbol id="arrow-right" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
@@ -416,12 +433,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"13DIF":[function(require,module,exports) {
+})({"6Tjzn":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "a011ea45b53a783f41aa917f6f3ed179";
+module.bundle.HMR_BUNDLE_ID = "34993fccd69850f2b6b271c8fd4ba2c5";
 // @flow
 /*global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE*/
 /*::
@@ -717,19 +734,20 @@ id) /*: string*/
   acceptedAssets[id] = true;
 }
 
-},{}],"2qOYU":[function(require,module,exports) {
+},{}],"5q0pm":[function(require,module,exports) {
 var typed = new Typed('.animate', {
             strings: ["I'm a frontend web developer.", 'I can make beautiful websites for you.'],
             typeSpeed: 50,
             backSpeed: 50,
             loop: true
             });
-},{}]},["13DIF","2qOYU"], "2qOYU", "parcelRequirea2c2")
+},{}]},["6Tjzn","5q0pm"], "5q0pm", "parcelRequirea2c2")
 
 </script>
 
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/gsap.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/index.b4f5078c.js"></script>
 </body>
 </html>

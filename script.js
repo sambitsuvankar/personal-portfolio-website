@@ -242,10 +242,22 @@ waitForImages();
 ///////////////////////////
 // NAvbar Toggle
 
-let nav = document.getElementById("navbar-hamburger")
+let nav = document.querySelector(".hambug")
 nav.addEventListener("click", ()=>{
 	document.querySelector(".hambug").classList.toggle("change");
 	document.querySelector(".hambg").classList.toggle("change");
 	document.querySelector(".hamItems").classList.toggle("itemChange");
 	document.getElementById("hambug-bg").classList.toggle("change");
 })
+
+// Swiper js
+var swiper = new Swiper('.swiper-container', {
+	direction: 'vertical',
+	slidesPerView: 1,
+	spaceBetween: 30,
+	mousewheel: true,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
+});
