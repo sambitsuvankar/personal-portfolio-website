@@ -11,8 +11,8 @@
   --card-height: 25vh;
   --card-transition-duration: 800ms;
   --card-transition-easing: ease;
-  --circle-height: 22rem;
-  --circle-width: 22rem;
+  --circle-height: 18vw;
+  --circle-width: 18vw;
 }
 
 body {
@@ -38,7 +38,7 @@ body {
 }
 .navEl .navElContainer{
   width: 15%;
-  height: 70%;
+  height: 100%;
 }
 
 .navElContainer .navText{
@@ -48,10 +48,8 @@ body {
   width: 100%;
   color: #d3e0ea;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 100%;
   font-family: "Ubuntu", sans-serif;
-  
-  
 }
 .navElContainer .navText::after{
   content: "";
@@ -200,7 +198,7 @@ body {
 header {
   height: 100vh;
   width: 100vw;
-  scroll-behavior: unset;
+  scroll-behavior: smooth;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -300,13 +298,13 @@ header .circle span:nth-child(3) {
 
 @media screen and (max-width: 800px){
   header .circle{
-    height: calc(var(--circle-height) - 10rem);
-    width: calc(var(--circle-width) - 10rem);
+    height: calc(var(--circle-height) + 8vh);
+    width: calc(var(--circle-width) + 17vw);
     margin-bottom: 35vh;
   }
   header .circle span{
-    height: calc(var(--circle-height) - 10rem);
-    width: calc(var(--circle-width) - 10rem);
+    height: calc(var(--circle-height) + 8vh);
+    width: calc(var(--circle-width) + 17vw);
   }
 }
 
@@ -314,7 +312,7 @@ header h2 {
   position: absolute;
   top: 60vh;
   font-family: 'poppins', sans-serif;
-  font-size: 4rem;
+  font-size: 3vw;
   color: #252839;
   -webkit-text-stroke: 0.1rem #bdc7c9;
   font-weight: bold;
@@ -354,7 +352,7 @@ header h2::before {
 
 @media screen and (max-width: 800px){
   header h2{
-    font-size: 2rem;
+    font-size: 7vw;
   }
 }
 
@@ -380,7 +378,7 @@ header .header-area h3 {
   margin: 0;
   padding: 0;
   color: #fff;
-  font-size: 3rem;
+  font-size: 3vw;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -488,7 +486,7 @@ header .header-area h3 span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-          align-items: center;
+          /* align-items: center; */
 }
 
 
@@ -523,8 +521,8 @@ header .header-area h3 span {
 
 #section1 .description .download-btn {
   margin-top: 2rem;
-  width: 20vw;
-  height: 3.3vh;
+  width: 30vw;
+  height: 3.7vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,6 +542,8 @@ header .header-area h3 span {
   text-align: center;
   color: #dddddd;
   font-family: 'Ubuntu', sans-serif;
+  font-size: 70%;
+  overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -564,6 +564,7 @@ header .header-area h3 span {
     padding-left: 20px ;
     padding-right: 20px;
     margin-top: 1rem;
+    align-items: center;
   }
   #section1 .description .description-name {
     padding-bottom: 2rem;
@@ -604,7 +605,7 @@ header .header-area h3 span {
 }
 .projects--heading1{
   color: #dddddd;
-  font-size: 2.5rem;
+  font-size: 170%;
   padding-bottom: 1rem;
   font-family: "Ubuntu", sans-serif;
   position: relative;
@@ -612,8 +613,7 @@ header .header-area h3 span {
 }
 .projects--heading2{
   color: #dddddd;
-  font-size: 2rem;
-  padding-bottom: 1rem;
+  font-size: 160%;
   font-family: "Ubuntu", sans-serif;
   position: relative;
   margin-bottom: 5vh;
@@ -889,16 +889,15 @@ button:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
   align-items: center;
   position: absolute;
   top: 360vh;
+  justify-content: space-evenly;
 }
 #section3 h1{
   color: #dddddd;
-  font-size: 2.5rem;
-  padding-bottom: 1rem;
+  font-size: 190%;
+  padding-top: 5vh;
   font-family: "Ubuntu", sans-serif;
   font-weight: 800;
   top: 20vh;
@@ -915,7 +914,7 @@ button:focus {
 .logos_row{
   /* background-color: #c9c6c6; */
   height: 100%;
-  width: 15vw;
+  width: 9vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -945,13 +944,21 @@ button:focus {
   text-align: center;
   padding-top: 7px;
 }
+@media screen and (max-width:800px){
+  #section3 h1{
+    font-size: 150%;
+  }
+  .logos_row{
+    width: 15vw;
+  }
+}
 
 /* contact section */
 
 .contact{
   position: absolute;
   top: 460vh;
-  padding: 50px 100px;
+  /* padding: 50px 100px; */
   min-height: 100vh;
   width: 100vw;
   background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -1094,12 +1101,42 @@ button:focus {
   .contactForm{
     width: 100%;
   }
-  .contactForm .inputBox input:focus ~ span,
-.contactForm .inputBox input:valid ~ span,
-.contactForm .inputBox textarea:focus ~ span,
-.contactForm .inputBox textarea:valid ~span{
-  color: #e91e63;
-  font-size: 12px;
-  transform: translateY(-20px);
 }
+
+/*  Footer Section  */
+footer{
+  height: 20vh;
+  width: 100vw;
+  background: linear-gradient(to right, #434343, #000000);
+  position: absolute;
+  top: 560vh;
+  /* margin-top: 10px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #e8eae6;
+}
+footer h4{
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+}
+.social{
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+.social .social-logo{
+  cursor: pointer;
+  color: #e8eae6;
+  transition: 0.5s;
+}
+.social .social-logo:hover{
+  color: #f9813a;
+  transform: scale(1.3);
+}
+@media screen and (max-width:800px){
+  footer{
+    top: 570vh;
+  }
 }
