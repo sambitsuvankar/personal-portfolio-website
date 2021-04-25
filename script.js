@@ -261,3 +261,84 @@ var swiper = new Swiper('.swiper-container', {
 		clickable: true,
 	},
 });
+
+
+// Scroll behaviour on navLink clicks
+
+const section0 = document.getElementById('section0')
+const section1 = document.getElementById('section1');
+const section2 = document.getElementById('section2');
+const section3 = document.getElementById('section3');
+const section4 = document.querySelector('#section4');
+
+const s1coords = section1.getBoundingClientRect()
+console.log(s1coords)
+
+const navText = document.querySelectorAll('.navElContainer');
+
+navText.forEach(nav => nav.addEventListener('click', function(e){
+	console.log(e.target.getBoundingClientRect())
+
+	// section1.scrollIntoView({behavior: 'smooth'})
+	console.log(e.target.classList.contains('navText'))
+
+	if (e.target.classList.contains('about')){
+		// window.scrollTo({
+		// 	left : s1coords.left + window.pageXOffset,
+		// 	top :  s1coords.top + window.pageYOffset,
+		// 	behavior : 'smooth',   // For a smooth animation
+		// }) 
+		section1.scrollIntoView({behavior: 'smooth'})
+	}
+	if (e.target.classList.contains('projects')){
+		section2.scrollIntoView({behavior: 'smooth'})
+	}
+	if (e.target.classList.contains('skills')){
+		section3.scrollIntoView( {behavior: 'smooth'})
+	}
+	if (e.target.classList.contains('contactme')){
+		section4.scrollIntoView({behavior: 'smooth'})
+	}
+	if (e.target.classList.contains('home')){
+		section0.scrollIntoView({behavior: 'smooth'})
+	}
+
+}))
+
+
+// document.addEventListener('scroll', () =>{
+// 	console.log('currentScroll (X/Y)', window.pageXOffset ,window.pageYOffset)
+
+// })
+
+// Sticky Navbar-----------
+const navbar = document.getElementById('navbar');
+
+window.addEventListener('scroll', function(e){
+	if(window.scrollY > s1coords.top){
+		navbar.classList.add('sticky')
+	}
+	else if(window.scrollY < s1coords.top){
+		navbar.classList.remove('sticky')
+	}
+})
+
+// HamBurger Nav links scroll------------
+
+const hamItems = document.querySelector('.hamItems');
+hamItems.addEventListener('click', (e) => {
+	const clicked = e.target.closest('.hamItem');
+	if(!clicked) return;
+	
+	const activeNum = clicked.dataset.tab;
+
+	// if (clicked.dataset.tab == 0)
+
+	document.getElementById(`section${activeNum}`).scrollIntoView({behavior: 'smooth'})
+
+	document.querySelector(".hambug").classList.toggle("change");
+	document.querySelector(".hambg").classList.toggle("change");
+	document.querySelector(".hamItems").classList.toggle("itemChange");
+	document.getElementById("hambug-bg").classList.toggle("change");
+});
+

@@ -30,6 +30,19 @@ body {
   margin-top: 1.5rem;
   z-index: 1;
 }
+
+#navbar.sticky{
+  position: fixed;
+  z-index: 20;
+  background: linear-gradient(to right, #434343, #000000);
+  width: 100vw;
+  left: 0;
+  right: 0;
+  padding: 0 15vw;
+  margin-top: 0;
+  opacity: 0.8;
+}
+
 #navbar .navEl {
   display: flex;
   justify-content: space-evenly;
@@ -39,6 +52,7 @@ body {
 .navEl .navElContainer{
   width: 15%;
   height: 100%;
+  padding-top: 10px;
 }
 
 .navElContainer .navText{
@@ -491,7 +505,7 @@ header .header-area h3 span {
 
 
 #section1 .description .description-name {
-  padding-bottom: 5rem;
+  padding: 2rem 0 4rem 0;
 }
 
 #section1 .description .description-name h2 {
@@ -526,9 +540,7 @@ header .header-area h3 span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 #section1 .description .download-btn .resume-btn {
@@ -584,6 +596,7 @@ header .header-area h3 span {
   #section1 .description .download-btn {
     width: 80%;
     height: 3.8vh;
+    justify-content: center;
   }
   
 }
@@ -953,9 +966,9 @@ button:focus {
   }
 }
 
-/* contact section */
+/* contact section4 */
 
-.contact{
+#section4{
   position: absolute;
   top: 460vh;
   /* padding: 50px 100px; */
@@ -970,22 +983,22 @@ button:focus {
   font-family: "Poppins", sans-serif;
 }
 
-.contact .content{
+#section4 .content{
   max-width: 800px;
   text-align: center;
   margin-bottom: 10rem;
 }
-.contact .content h2{
+#section4 .content h2{
   font-size: 36px;
   font-weight: 500;
   color: #fff;
 }
-.contact .content p{
+#section4 .content p{
   font-weight: 300;
   color: #fff;
 }
 
-.contact .container{
+#section4 .container{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1083,13 +1096,13 @@ button:focus {
   
 }
 @media screen and (max-width: 991px){
-  .contact{
+  #section4{
     padding: 50px;
   }
-  .contact .content{
+  #section4 .content{
     margin-bottom: 2rem;
   }
-  .contact .content h2{
+  #section4 .content h2{
     font-size: 28px;
   }
   .container{
@@ -1126,6 +1139,7 @@ footer h4{
   display: flex;
   justify-content: space-evenly;
   width: 50%;
+  padding-top: 25px;
 }
 .social .social-logo{
   cursor: pointer;

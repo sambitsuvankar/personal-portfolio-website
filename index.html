@@ -16,22 +16,22 @@
     <title>Personal portfolio</title>
 </head>
 <body>
-    <section id="navbar">
+    <section id="navbar" >
         <div class="navEl">
             <div class="navElContainer">
-                <div class="navText">Home</div>
+                <div class="navText home">Home</div>
             </div>
             <div class="navElContainer">
-                <div class="navText">About me</div>
+                <div class="navText about">About me</div>
             </div>
             <div class="navElContainer">
-                <div class="navText">My projects</div>
+                <div class="navText projects">My projects</div>
             </div>
             <div class="navElContainer">
-                <div class="navText">Skills</div>
+                <div class="navText skills">Skills</div>
             </div>
             <div class="navElContainer">
-                <div class="navText">Contact me</div>
+                <div class="navText contactme">Contact me</div>
             </div>
         </div>
     </section>
@@ -48,15 +48,15 @@
         <div class="hambg">
         </div>
         <div class="hamItems">
-            <div class="hamItem">Home</div>
-            <div class="hamItem">About me</div>
-            <div class="hamItem">My projects</div>
-            <div class="hamItem">Skills</div>
-            <div class="hamItem">Contact me</div>
+            <div class="hamItem" data-tab="0">Home</div>
+            <div class="hamItem" data-tab="1">About me</div>
+            <div class="hamItem" data-tab="2">My projects</div>
+            <div class="hamItem" data-tab="3">Skills</div>
+            <div class="hamItem" data-tab="4">Contact me</div>
         </div>
     </div>
 
-    <header>
+    <header id="section0">
         <div class="main-image">
         </div>
         <div class="circle">
@@ -94,8 +94,8 @@
             </div>
             <hr>
             <div class="download-btn" >
-                <div class="resume-btn"> Download Resume</div>
-                <div class='resume-btn'> My Works </div>
+                <div class="resume-btn dnld"> Download Resume</div>
+                <!-- <div class='resume-btn wrk'> My Works </div> -->
             </div>
         </div>
     </div>
@@ -234,7 +234,7 @@
             </div>
         </div>
     </div>
-    <section class="contact">
+    <section id="section4">
         <div class="content">
             <h2>Contact Me</h2>
             <p>If you liked my work then do let me know if we can work togather. My contact details are given below</p>
@@ -288,11 +288,26 @@
         <footer>
             <h4> ©CopyRight | Sambit Suvankar </h4>
             <div class="social">
-                <div class="social-logo"><i class="fa fa-facebook-official" aria-hidden="true"></i></div>
-                <div class="social-logo"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                <div class="social-logo"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-                <div class="social-logo"><i class="fa fa-github" aria-hidden="true"></i></div>
-                <div class="social-logo"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                <a href="https://www.facebook.com/sambit.suvankar.1/" target="_blank">
+                    <div class="social-logo"><i class="fa fa-facebook-official" aria-hidden="true"></i></div>
+                </a>
+
+                <a href="https://www.instagram.com/i.m_sambit/" target="_blank">
+                    <div class="social-logo"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/sambit-suvankar-004a0a139/" target="_blank">
+                    <div class="social-logo"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                </a>
+
+                <a href="https://github.com/sambitsuvankar" target="_blank">
+                    <div class="social-logo"><i class="fa fa-github" aria-hidden="true"></i></div>
+                </a>
+
+                <a href="mailto:sambitsuvankar007@hotmail.com" target="_blank">
+                    <div class="social-logo"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                </a>
+                    
             </div>
         </footer>
     </section>
