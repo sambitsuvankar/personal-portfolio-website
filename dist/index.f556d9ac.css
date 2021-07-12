@@ -10,8 +10,8 @@
   --card-height: 25vh;
   --card-transition-duration: 800ms;
   --card-transition-easing: ease;
-  --circle-height: 22rem;
-  --circle-width: 22rem;
+  --circle-height: 18vw;
+  --circle-width: 18vw;
 }
 body {
   background-color: white;
@@ -27,6 +27,17 @@ body {
   margin-top: 1.5rem;
   z-index: 1;
 }
+#navbar.sticky{
+  position: fixed;
+  z-index: 20;
+  background: linear-gradient(to right, #434343, #000000);
+  width: 100vw;
+  left: 0;
+  right: 0;
+  padding: 0 15vw;
+  margin-top: 0;
+  opacity: 0.8;
+}
 #navbar .navEl {
   display: flex;
   justify-content: space-evenly;
@@ -35,7 +46,8 @@ body {
 }
 .navEl .navElContainer{
   width: 15%;
-  height: 70%;
+  height: 100%;
+  padding-top: 10px;
 }
 .navElContainer .navText{
   text-align: center;
@@ -44,15 +56,13 @@ body {
   width: 100%;
   color: #d3e0ea;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 100%;
   font-family: "Ubuntu", sans-serif;
-  
-  
 }
 .navElContainer .navText::after{
   content: "";
   width: 0%;
-  height: 100%;
+  height: 70%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -60,7 +70,7 @@ body {
   right: 0;
   /* background-color: #e84545;   */
   background-size: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
   border-bottom: 3px solid #f2a154;
   border-width: 0%;
   transition: linear 0.3s;
@@ -190,7 +200,7 @@ body {
 header {
   height: 100vh;
   width: 100vw;
-  scroll-behavior: unset;
+  scroll-behavior: smooth;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -279,20 +289,20 @@ header .circle span:nth-child(3) {
 }
 @media screen and (max-width: 800px){
   header .circle{
-    height: calc(var(--circle-height) - 10rem);
-    width: calc(var(--circle-width) - 10rem);
+    height: calc(var(--circle-height) + 8vh);
+    width: calc(var(--circle-width) + 17vw);
     margin-bottom: 35vh;
   }
   header .circle span{
-    height: calc(var(--circle-height) - 10rem);
-    width: calc(var(--circle-width) - 10rem);
+    height: calc(var(--circle-height) + 8vh);
+    width: calc(var(--circle-width) + 17vw);
   }
 }
 header h2 {
   position: absolute;
   top: 60vh;
   font-family: 'poppins', sans-serif;
-  font-size: 4rem;
+  font-size: 3vw;
   color: #252839;
   -webkit-text-stroke: 0.1rem #bdc7c9;
   font-weight: bold;
@@ -328,7 +338,7 @@ header h2::before {
 }
 @media screen and (max-width: 800px){
   header h2{
-    font-size: 2rem;
+    font-size: 7vw;
   }
 }
 header .header-area {
@@ -352,7 +362,7 @@ header .header-area h3 {
   margin: 0;
   padding: 0;
   color: #fff;
-  font-size: 3rem;
+  font-size: 3vw;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 header .header-area h3 span {
@@ -451,10 +461,10 @@ header .header-area h3 span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-          align-items: center;
+          /* align-items: center; */
 }
 #section1 .description .description-name {
-  padding-bottom: 5rem;
+  padding: 2rem 0 4rem 0;
 }
 #section1 .description .description-name h2 {
   color: #e84545;
@@ -479,14 +489,12 @@ header .header-area h3 span {
 }
 #section1 .description .download-btn {
   margin-top: 2rem;
-  width: 20vw;
-  height: 3.3vh;
+  width: 30vw;
+  height: 3.7vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 #section1 .description .download-btn .resume-btn {
   border: 1px solid #e84545;
@@ -499,6 +507,8 @@ header .header-area h3 span {
   text-align: center;
   color: #dddddd;
   font-family: 'Ubuntu', sans-serif;
+  font-size: 70%;
+  overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -517,6 +527,7 @@ header .header-area h3 span {
     padding-left: 20px ;
     padding-right: 20px;
     margin-top: 1rem;
+    align-items: center;
   }
   #section1 .description .description-name {
     padding-bottom: 2rem;
@@ -536,6 +547,7 @@ header .header-area h3 span {
   #section1 .description .download-btn {
     width: 80%;
     height: 3.8vh;
+    justify-content: center;
   }
   
 }
@@ -554,7 +566,7 @@ header .header-area h3 span {
 }
 .projects--heading1{
   color: #dddddd;
-  font-size: 2.5rem;
+  font-size: 170%;
   padding-bottom: 1rem;
   font-family: "Ubuntu", sans-serif;
   position: relative;
@@ -562,8 +574,7 @@ header .header-area h3 span {
 }
 .projects--heading2{
   color: #dddddd;
-  font-size: 2rem;
-  padding-bottom: 1rem;
+  font-size: 160%;
   font-family: "Ubuntu", sans-serif;
   position: relative;
   margin-bottom: 5vh;
@@ -829,16 +840,15 @@ button:focus {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  width: 100vw;
   align-items: center;
   position: absolute;
   top: 360vh;
+  justify-content: space-evenly;
 }
 #section3 h1{
   color: #dddddd;
-  font-size: 2.5rem;
-  padding-bottom: 1rem;
+  font-size: 190%;
+  padding-top: 5vh;
   font-family: "Ubuntu", sans-serif;
   font-weight: 800;
   top: 20vh;
@@ -853,7 +863,7 @@ button:focus {
 .logos_row{
   /* background-color: #c9c6c6; */
   height: 100%;
-  width: 15vw;
+  width: 9vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -882,12 +892,20 @@ button:focus {
   text-align: center;
   padding-top: 7px;
 }
-/* contact section */
-.contact{
+@media screen and (max-width:800px){
+  #section3 h1{
+    font-size: 150%;
+  }
+  .logos_row{
+    width: 15vw;
+  }
+}
+/* contact section4 */
+#section4{
   position: absolute;
   top: 460vh;
   /* padding: 50px 100px; */
-  min-height: 100vh;
+  min-height: 120vh;
   width: 100vw;
   background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: flex;
@@ -897,26 +915,27 @@ button:focus {
   background-size: cover;
   font-family: "Poppins", sans-serif;
 }
-.contact .content{
+#section4 .content{
   max-width: 800px;
   text-align: center;
   margin-bottom: 10rem;
 }
-.contact .content h2{
+#section4 .content h2{
   font-size: 36px;
   font-weight: 500;
   color: #fff;
 }
-.contact .content p{
+#section4 .content p{
   font-weight: 300;
   color: #fff;
 }
-.contact .container{
+#section4 .container{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   margin-top: 30px;
+  margin-bottom: 5vh;
 }
 .container .contactInfo{
   width: 50%;
@@ -1005,13 +1024,13 @@ button:focus {
   
 }
 @media screen and (max-width: 991px){
-  .contact{
+  #section4{
     padding: 50px;
   }
-  .contact .content{
+  #section4 .content{
     margin-bottom: 2rem;
   }
-  .contact .content h2{
+  #section4 .content h2{
     font-size: 28px;
   }
   .container{
@@ -1025,39 +1044,42 @@ button:focus {
     width: 100%;
   }
 }
+/*  Footer Section  */
 footer{
   height: 20vh;
   width: 100vw;
   background: linear-gradient(to right, #434343, #000000);
-  position: absolute;
-  top: 560vh;
   /* margin-top: 10px; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  color: white;
+  color: #e8eae6;
+  padding-top: 15vh;
 }
 footer h4{
   font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-size: 90%;
 }
 .social{
   display: flex;
   justify-content: space-evenly;
-  width: 80%;
+  width: 50%;
+  padding-top: 25px;
 }
 .social .social-logo{
   cursor: pointer;
-  color: #fff;
+  color: #e8eae6;
   transition: 0.5s;
 }
-.social .social-logo{
+.social .social-logo:hover{
   color: #f9813a;
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
-@media screen and (max-width:800px){
+/* @media screen and (max-width:800px){
   footer{
     top: 570vh;
   }
-}
+} */
 /*# sourceMappingURL=index.f556d9ac.css.map */
