@@ -62,7 +62,7 @@ body {
 .navElContainer .navText::after{
   content: "";
   width: 0%;
-  height: 70%;
+  height: 90%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -82,7 +82,7 @@ body {
   width: 100%;
   transform-origin: center;
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1025px){
   #navbar{
     display: none;
   }
@@ -115,7 +115,7 @@ body {
   background-color: #8ab6d6;
   border-radius: 30px;
   /* opacity: 0.9; */
-  transition: 1s ease;
+  transition: 0.1s ease;
 }
 #navbar-hamburger .change .hamslice{
   background-color: #2b4f60;
@@ -134,7 +134,7 @@ body {
   transform: translateY(-25%) rotateZ(45deg);
   opacity: 0.8;
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:1025px){
   #navbar-hamburger{
     display: flex;
   }
@@ -167,7 +167,7 @@ body {
 #hambug-bg.change{
   z-index: 2;
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1025px){
   #hambug-bg{
     display: flex;
     flex-direction: column;
@@ -287,7 +287,7 @@ header .circle span:nth-child(3) {
   -webkit-filter: blur(15px);
           filter: blur(15px);
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1025px){
   header .circle{
     height: calc(var(--circle-height) + 8vh);
     width: calc(var(--circle-width) + 17vw);
@@ -336,7 +336,7 @@ header h2::before {
     width: 100%;
   }
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1025px){
   header h2{
     font-size: 7vw;
   }
@@ -369,7 +369,7 @@ header .header-area h3 span {
   color: #d3e0ea;
   font-family: 'New Tegomin', serif;
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1025px){
   header .header-area h3{
     font-size: 1.3rem;
   }
@@ -429,7 +429,7 @@ header .header-area h3 span {
   font-family: 'Ubuntu', sans-serif;
   font-size: 1rem;
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1025px){
   #section1{
     display: flex;
     flex-direction: column;
@@ -520,7 +520,7 @@ header .header-area h3 span {
   background-color: #e84545;
   cursor: pointer;
 }
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1025px){
   #section1 .description{
     height: 60%;
     width: 100%;
@@ -764,7 +764,7 @@ button:focus {
   opacity: 0;
   display: none;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1025px) {
   :root {
     --card-width: 45vw;
     --card-height: 30vh;
@@ -814,19 +814,18 @@ button:focus {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
   align-items: center;
 }
-.swiper-slide:nth-child(1){
-  background-image: url("4.206b08ca.jpeg");
+.swiper-slide img {
+  position: absolute;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:1025px){
   .app2{
     width: 90vw;
     height: 30vh;
@@ -892,7 +891,7 @@ button:focus {
   text-align: center;
   padding-top: 7px;
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:1025px){
   #section3 h1{
     font-size: 150%;
   }
@@ -1023,7 +1022,7 @@ button:focus {
   font-size: 18px;
   
 }
-@media screen and (max-width: 991px){
+@media screen and (max-width: 1025px){
   #section4{
     padding: 50px;
   }
@@ -1055,7 +1054,7 @@ footer{
   justify-content: space-evenly;
   align-items: center;
   color: #e8eae6;
-  padding-top: 15vh;
+  /* padding-top: 15vh; */
 }
 footer h4{
   font-family: "Ubuntu", sans-serif;
