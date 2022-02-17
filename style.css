@@ -471,6 +471,7 @@ header .header-area h3 span {
   #section1{
     display: flex;
     flex-direction: column;
+    height: 130vh;
   }
   #section1 .about{
     height: 50%;
@@ -554,7 +555,7 @@ header .header-area h3 span {
   text-align: center;
   color: #dddddd;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 70%;
+  font-size: medium;
   overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -592,11 +593,15 @@ header .header-area h3 span {
   #section1 .description .description-text p{
     font-size: 0.9rem;
     margin-bottom: 1rem;
+    text-align: center;
   }
   #section1 .description .download-btn {
     width: 80%;
-    height: 3.8vh;
+    height: 4.5vh;
     justify-content: center;
+  }
+  #section1 .description .download-btn .resume-btn {
+    font-size: small;
   }
   
 }
